@@ -1009,6 +1009,11 @@ GROUP BY SOH.TerritoryID, ST.CountryRegionCode, ST.Name;
 SELECT *
 FROM Sales.SalesOrderDetail;
 
+-- number of rows Order Details
+SELECT COUNT (* )
+FROM Sales.SalesOrderDetail;
+
+
 --Product with the most ordered by year
 WITH cte_product_ordered ([YEAR], ProductID, OrderNumber) AS (
 	SELECT YEAR(ModifiedDate) as [YEAR], 
